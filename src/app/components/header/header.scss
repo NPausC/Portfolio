@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 40px;
 }
 
 .header__logo-link,
@@ -15,4 +16,12 @@
 .header__language-switch {
   display: flex;
   align-items: center;
+}
+
+.header__nav {
+  gap: 24px;
+}
+
+.header__language-switch {
+  gap: 8px;
 }
