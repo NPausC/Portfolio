@@ -1,3 +1,12 @@
-<article>
-  <h3>Project Card</h3>
+<article class="project-card">
+  <span class="project-card__number">{{ projectNumber }}</span>
+
+  <div class="project-card__image-wrapper">
+    <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
+  </div>
+
+  <div class="project-card__text">
+    <h3 class="project-card__title">{{ title }}</h3>
+    <p class="project-card__subtitle">{{ subtitle }}</p>
+  </div>
 </article>

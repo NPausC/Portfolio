@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './project-card.scss',
 })
 export class ProjectCard {
-
+  @Input() projectNumber = '';
+  @Input() title = '';
+  @Input() subtitle = '';
+  @Input() imageSrc = '';
+  @Input() imageAlt = '';
 }

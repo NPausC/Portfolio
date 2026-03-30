@@ -1,0 +1,52 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card__number {
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.project-card__image-wrapper {
+  width: 100%;
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-card__title,
+.project-card__subtitle {
+  margin: 0;
+}
+
+.project-card__title {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.project-card__subtitle {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .project-card__number {
+    font-size: 16px;
+  }
+
+  .project-card__title {
+    font-size: 24px;
+  }
+}
