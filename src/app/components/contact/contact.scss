@@ -1,0 +1,115 @@
+.contact {
+  padding: 96px 40px 80px;
+  background-color: #000000;
+  color: #f8f6ee;
+}
+
+.contact__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.contact__intro {
+  width: 100%;
+  max-width: 320px;
+}
+
+.contact__title {
+  margin: 0;
+  font-size: 96px;
+  line-height: 0.9;
+}
+
+.contact__form-area {
+  width: 100%;
+  max-width: 640px;
+}
+
+.contact__subtitle {
+  margin: 0 0 16px;
+  font-size: 36px;
+  line-height: 1.1;
+  color: #00d7b7;
+}
+
+.contact__text {
+  margin: 0 0 32px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #f8f6ee;
+  background-color: transparent;
+  color: #f8f6ee;
+  font-size: 18px;
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: #f8f6ee;
+}
+
+.contact__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact__checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact__checkbox-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact__link {
+  color: #00d7b7;
+  text-decoration: none;
+}
+
+.contact__button {
+  align-self: center;
+  min-width: 220px;
+  padding: 14px 24px;
+  border: 1px solid #f8f6ee;
+  background-color: transparent;
+  color: #7a7a7a;
+}
+
+@media (max-width: 992px) {
+  .contact {
+    padding: 72px 24px 64px;
+  }
+
+  .contact__content {
+    flex-direction: column;
+  }
+
+  .contact__title {
+    font-size: 64px;
+  }
+
+  .contact__subtitle {
+    font-size: 28px;
+  }
+
+  .contact__text {
+    font-size: 18px;
+  }
+}
