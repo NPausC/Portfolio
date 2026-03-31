@@ -12,4 +12,8 @@ export class Header {
   toggleMenu(): void {
     this.menuIsOpen = !this.menuIsOpen;
   }
+
+  closeMenu(): void {
+    this.menuIsOpen = false;
+  }
 }

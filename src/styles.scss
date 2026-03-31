@@ -6,10 +6,32 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Overpass', sans-serif;
+  background-color: #fffcf3;
+  color: #000000;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: 'Syne', sans-serif;
+}
+
+p,
+a,
+span,
+input,
+textarea,
+label {
+  font-family: 'Overpass', sans-serif;
 }
 
 .page-container {

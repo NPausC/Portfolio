@@ -11,7 +11,8 @@
       </div>
 
       <button
-        class="header__menu-button" [class.header__menu-button--open]="menuIsOpen"
+        class="header__menu-button"
+        [class.header__menu-button--open]="menuIsOpen"
         type="button"
         [attr.aria-label]="menuIsOpen ? 'Close menu' : 'Open menu'"
         (click)="toggleMenu()"
@@ -26,11 +27,14 @@
   <div class="header__menu-overlay" [class.header__menu-overlay--open]="menuIsOpen">
     <div class="page-container header__menu-content">
       <nav class="header__menu-nav">
-        <a class="header__menu-link" href="#about-me" (click)="toggleMenu()">About me</a>
-        <a class="header__menu-link" href="#skills" (click)="toggleMenu()">Skills</a>
-        <a class="header__menu-link" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
-        <a class="header__menu-link" href="#contact" (click)="toggleMenu()">Contact</a>
+        <a class="header__menu-link" href="#about-me" (click)="closeMenu()">About me</a>
+        <a class="header__menu-link" href="#skills" (click)="closeMenu()">My skills</a>
+        <a class="header__menu-link" href="#portfolio" (click)="closeMenu()">Portfolio</a>
       </nav>
+
+      <div class="header__menu-footer">
+        <a class="header__menu-footer-link" href="#contact" (click)="closeMenu()">Say hi!</a>
+      </div>
     </div>
   </div>
 </header>
