@@ -2,14 +2,20 @@
   <div class="page-container portfolio__content">
     <h2 class="portfolio__title">Portfolio</h2>
 
+    <p class="portfolio__intro">
+      Explore a selection of my work here - Interact with projects to see my skills in action.
+    </p>
+
     <div class="portfolio__projects">
       @for (project of projects; track project.title) {
         <app-project-card
           [projectNumber]="project.projectNumber"
           [title]="project.title"
           [subtitle]="project.subtitle"
+          [description]="project.description"
           [imageSrc]="project.imageSrc"
           [imageAlt]="project.imageAlt"
+          [reverse]="project.reverse"
         ></app-project-card>
       }
     </div>

@@ -10,6 +10,8 @@ export class ProjectCard {
   @Input() projectNumber = '';
   @Input() title = '';
   @Input() subtitle = '';
+  @Input() description = '';
   @Input() imageSrc = '';
   @Input() imageAlt = '';
+  @Input() reverse = false;
 }

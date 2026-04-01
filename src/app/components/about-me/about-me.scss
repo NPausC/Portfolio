@@ -1,5 +1,5 @@
 .about-me {
-  padding: 162px 24px 0;
+  padding: 48px 24px 0;
   background-color: #fffcf3;
 }
 
@@ -70,14 +70,21 @@
 }
 
 .about-me__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 38px;
   min-width: 174px;
+  min-height: 64px;
   padding: 16px 30px;
   border: 3px solid #000000;
   background-color: transparent;
   color: #000000;
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -92,9 +99,21 @@
   align-items: center;
   width: 100%;
   min-height: 515px;
-  background-color: #d7d7d7;
-  color: #000000;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ececec 0%, #d4d4d4 100%);
+}
+
+.about-me__image-placeholder-text {
+  color: #3a3a3a;
   font-size: 20px;
+  line-height: 1;
+}
+
+.about-me__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-me__arrow {
@@ -110,7 +129,7 @@
 
 @media (max-width: 992px) {
   .about-me {
-    padding: 50px 14px 0;
+    padding: 24px 14px 0;
   }
 
   .about-me__card {
@@ -153,6 +172,9 @@
 
   .about-me__image-placeholder {
     min-height: 390px;
+  }
+
+  .about-me__image-placeholder-text {
     font-size: 18px;
   }
 

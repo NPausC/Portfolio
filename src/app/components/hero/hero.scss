@@ -1,18 +1,17 @@
 .hero {
-  min-height: 100vh;
-  padding: 0 24px;
+  padding: 0 24px 0;
   background-color: #fffcf3;
   color: #000000;
 }
 
 .hero__content {
   position: relative;
-  min-height: 100vh;
+  min-height: 580px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
-  padding: 204px 76px 40px;
+  padding: 72px 76px 24px;
 }
 
 .hero__mail-link {
@@ -29,7 +28,7 @@
 .hero__headline-block {
   width: 100%;
   max-width: 1240px;
-  min-height: 561px;
+  min-height: 420px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -44,9 +43,9 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Syne', sans-serif;
-  font-size: 128px;
+  font-size: 118px;
   font-weight: 800;
-  line-height: 0.86;
+  line-height: 0.9;
   letter-spacing: -0.04em;
   text-align: center;
 }
@@ -62,11 +61,11 @@
   justify-content: flex-end;
   align-items: center;
   gap: 18px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .hero__name-line {
-  width: 360px;
+  width: 320px;
   height: 3px;
   background-color: #000000;
 }
@@ -75,7 +74,7 @@
   margin: 0;
   color: #00d7b7;
   font-family: 'Overpass', sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1;
   text-align: right;
@@ -84,11 +83,11 @@
 .hero__scroll {
   position: absolute;
   right: 76px;
-  bottom: 56px;
+  bottom: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .hero__scroll-arrow {
@@ -112,23 +111,24 @@
   }
 
   .hero__content {
+    min-height: 530px;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0;
-    padding: 243px 0 32px;
+    padding: 110px 0 16px;
   }
 
   .hero__mail-link {
     left: 0;
     top: auto;
-    bottom: 116px;
+    bottom: 96px;
     font-size: 16px;
     transform: rotate(180deg);
   }
 
   .hero__headline-block {
     max-width: 396px;
-    min-height: 530px;
+    min-height: 420px;
     margin: 0;
     align-items: flex-start;
   }
@@ -136,8 +136,8 @@
   .hero__title {
     max-width: 396px;
     align-items: flex-start;
-    font-size: 64px;
-    line-height: 0.9;
+    font-size: 58px;
+    line-height: 0.94;
     text-align: left;
   }
 
@@ -145,7 +145,7 @@
     max-width: 396px;
     justify-content: flex-start;
     gap: 12px;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 
   .hero__name-line {
@@ -154,13 +154,13 @@
   }
 
   .hero__name {
-    font-size: 28px;
+    font-size: 26px;
     text-align: left;
   }
 
   .hero__scroll {
     right: 0;
-    bottom: 44px;
+    bottom: 28px;
     gap: 8px;
   }
 

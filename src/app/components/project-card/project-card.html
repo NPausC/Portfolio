@@ -1,12 +1,15 @@
-<article class="project-card">
+<article class="project-card" [class.project-card--reverse]="reverse">
   <span class="project-card__number">{{ projectNumber }}</span>
 
-  <div class="project-card__image-wrapper">
-    <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
-  </div>
+  <div class="project-card__content">
+    <div class="project-card__image-wrapper">
+      <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
+    </div>
 
-  <div class="project-card__text">
-    <h3 class="project-card__title">{{ title }}</h3>
-    <p class="project-card__subtitle">{{ subtitle }}</p>
+    <div class="project-card__text">
+      <h3 class="project-card__title">{{ title }}</h3>
+      <p class="project-card__subtitle">{{ subtitle }}</p>
+      <p class="project-card__description">{{ description }}</p>
+    </div>
   </div>
 </article>

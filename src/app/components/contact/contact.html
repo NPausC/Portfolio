@@ -1,27 +1,50 @@
 <section id="contact" class="contact">
   <div class="page-container contact__content">
-    <div class="contact__intro">
-      <h2 class="contact__title">Say Hi!</h2>
-    </div>
+    <span class="contact__arrow"></span>
 
-    <div class="contact__form-area">
-      <h3 class="contact__subtitle">Want to discuss a new project?</h3>
-      <p class="contact__text">Say hello! Let's discuss your ideas and make it happen.</p>
+    <div class="contact__panel">
+      <div class="contact__intro">
+        <h2 class="contact__title">Say Hi!</h2>
+      </div>
 
-      <form class="contact__form">
-        <input class="contact__input" type="text" placeholder="Your name" />
-        <input class="contact__input" type="email" placeholder="Your email" />
-        <textarea class="contact__textarea" placeholder="Your message"></textarea>
+      <div class="contact__form-area">
+        <h3 class="contact__subtitle">Want to discuss a new project?</h3>
+        <p class="contact__text">Say hello! Let's discuss your ideas and make it happen.</p>
 
-        <label class="contact__checkbox-row">
-          <input class="contact__checkbox" type="checkbox" />
-          <span class="contact__checkbox-text">
-            I've read the <a class="contact__link" href="#">privacy policy</a> and agree to the processing of my data as outlined.
-          </span>
-        </label>
+        <form class="contact__form">
+          <input class="contact__input" type="text" placeholder="Your name" />
+          <input class="contact__input" type="email" placeholder="Your email" />
+          <textarea class="contact__textarea" placeholder="Your message"></textarea>
 
-        <button class="contact__button" type="submit">Send message</button>
-      </form>
+          <label class="contact__checkbox-row">
+            <input class="contact__checkbox" type="checkbox" />
+            <span class="contact__checkbox-text">
+              I've read the <a class="contact__link" routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
+            </span>
+          </label>
+
+          <button class="contact__button" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <div class="contact__footer">
+        <div class="contact__brand-block">
+          <span class="contact__logo">[NP]</span>
+          <p class="contact__copyright">© Norman Pfalzer 2022</p>
+        </div>
+
+        <div class="contact__footer-right">
+          <a class="contact__back-to-top" href="#top" aria-label="Back to top">↑</a>
+
+          <div class="contact__socials">
+            <a class="contact__social-link" href="#" aria-label="GitHub">GH</a>
+            <a class="contact__social-link" href="mailto:n.pfalzer@kabelmail.de" aria-label="Email">@</a>
+            <a class="contact__social-link" href="#" aria-label="LinkedIn">in</a>
+          </div>
+
+          <a class="contact__legal-link" routerLink="/legal-notice">Legal notice</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

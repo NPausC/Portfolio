@@ -128,7 +128,9 @@
 
 .header__menu-footer-link {
   color: #000000;
-  font-size: 16px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
   text-decoration: none;
 }
 
@@ -177,6 +179,10 @@
   }
 
   .header__menu-link {
+    font-size: 28px;
+  }
+
+  .header__menu-footer-link {
     font-size: 28px;
   }
 }
