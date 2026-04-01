@@ -1,5 +1,12 @@
 @font-face {
   font-family: 'Syne';
+  src: url('/assets/fonts/syne/Syne-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Syne';
   src: url('/assets/fonts/syne/Syne-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;

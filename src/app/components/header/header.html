@@ -25,15 +25,56 @@
   </div>
 
   <div class="header__menu-overlay" [class.header__menu-overlay--open]="menuIsOpen">
-    <div class="page-container header__menu-content">
-      <nav class="header__menu-nav">
-        <a class="header__menu-link" href="#about-me" (click)="closeMenu()">About me</a>
-        <a class="header__menu-link" href="#skills" (click)="closeMenu()">My skills</a>
-        <a class="header__menu-link" href="#portfolio" (click)="closeMenu()">Portfolio</a>
-      </nav>
+    <div class="page-container header__menu-shell">
+      <div class="header__menu-topbar">
+        <a class="header__logo-link" href="#top" (click)="closeMenu()">
+          <span class="header__logo-text">[NP]</span>
+        </a>
+
+        <div class="header__actions">
+          <div class="header__language-switch">
+            <button class="header__language-button header__language-button--active" type="button">EN</button>
+            <button class="header__language-button" type="button">DE</button>
+          </div>
+
+          <button
+            class="header__menu-button header__menu-button--open"
+            type="button"
+            aria-label="Close menu"
+            (click)="closeMenu()"
+          >
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="header__menu-body">
+        <nav class="header__menu-nav">
+          @for (item of menuItems; track item.target) {
+            <a class="header__menu-link" [href]="item.target" (click)="closeMenu()">
+              <span class="header__menu-link-marker"></span>
+              <span class="header__menu-link-text">{{ item.label }}</span>
+            </a>
+          }
+        </nav>
+      </div>
 
       <div class="header__menu-footer">
-        <a class="header__menu-footer-link" href="#contact" (click)="closeMenu()">Say hi!</a>
+        <div class="header__menu-footer-slope"></div>
+        <div class="header__menu-footer-content">
+          <div class="header__menu-contact-block">
+            <a class="header__menu-footer-link" href="#contact" (click)="closeMenu()">Say Hi!</a>
+            <a class="header__menu-email" href="mailto:n.pfalzer@kabelmail.de">n.pfalzer@kabelmail.de</a>
+          </div>
+
+          <div class="header__menu-socials">
+            <a class="header__menu-social-link" href="https://github.com/" target="_blank" rel="noreferrer">GH</a>
+            <a class="header__menu-social-link" href="mailto:n.pfalzer@kabelmail.de">@</a>
+            <a class="header__menu-social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

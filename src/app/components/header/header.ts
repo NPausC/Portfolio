@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
 export class Header {
   menuIsOpen = false;
 
+  menuItems = [
+    { label: 'About me', target: '#about-me' },
+    { label: 'My skills', target: '#skills' },
+    { label: 'Portfolio', target: '#portfolio' },
+  ];
+
   toggleMenu(): void {
     this.menuIsOpen = !this.menuIsOpen;
   }

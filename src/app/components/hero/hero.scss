@@ -15,13 +15,14 @@
 
   &__mail-link {
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: 28px;
+    top: auto;
+    bottom: 76px;
     color: #000000;
     font-size: 18px;
     text-decoration: none;
     writing-mode: vertical-rl;
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
   }
 
   &__headline-block {
@@ -59,12 +60,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 18px;
-    margin-top: 10px;
+    gap: 22px;
+    margin-top: 34px;
   }
 
   &__name-line {
-    width: 320px;
+    width: 610px;
     height: 3px;
     background-color: #000000;
   }
@@ -118,9 +119,9 @@
     }
 
     &__mail-link {
-      left: 0;
+      left: 12px;
       top: auto;
-      bottom: 96px;
+      bottom: 92px;
       font-size: 16px;
       transform: rotate(180deg);
     }
@@ -143,12 +144,12 @@
     &__name-row {
       max-width: 396px;
       justify-content: flex-start;
-      gap: 12px;
-      margin-top: 8px;
+      gap: 10px;
+      margin-top: 14px;
     }
 
     &__name-line {
-      width: 148px;
+      width: 168px;
       height: 2px;
     }
 
