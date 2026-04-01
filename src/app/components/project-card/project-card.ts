@@ -13,5 +13,7 @@ export class ProjectCard {
   @Input() description = '';
   @Input() imageSrc = '';
   @Input() imageAlt = '';
+  @Input() liveLink = '';
+  @Input() githubLink = '';
   @Input() reverse = false;
 }

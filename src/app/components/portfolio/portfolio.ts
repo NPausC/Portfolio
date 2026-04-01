@@ -1,6 +1,18 @@
 import { Component } from '@angular/core';
 import { ProjectCard } from '../project-card/project-card';
 
+type Project = {
+  projectNumber: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  liveLink: string;
+  githubLink: string;
+  reverse: boolean;
+};
+
 @Component({
   selector: 'app-portfolio',
   imports: [ProjectCard],
@@ -8,7 +20,7 @@ import { ProjectCard } from '../project-card/project-card';
   styleUrl: './portfolio.scss',
 })
 export class Portfolio {
-  projects = [
+  projects: Project[] = [
     {
       projectNumber: '01/04',
       title: 'Join',
@@ -16,6 +28,8 @@ export class Portfolio {
       description: 'Kanban project management tool for creating and organizing tasks.',
       imageSrc: 'images/portfolio/join.png',
       imageAlt: 'Join project preview',
+      liveLink: 'https://example.com/join',
+      githubLink: 'https://github.com/example/join',
       reverse: false,
     },
     {
@@ -25,6 +39,8 @@ export class Portfolio {
       description: 'Side-scrolling game project with keyboard controls and level logic.',
       imageSrc: 'images/portfolio/sharkie.png',
       imageAlt: 'Sharkie project preview',
+      liveLink: 'https://example.com/sharkie',
+      githubLink: 'https://github.com/example/sharkie',
       reverse: true,
     },
     {
@@ -34,6 +50,8 @@ export class Portfolio {
       description: 'Messaging app layout with channels, contacts and direct messages.',
       imageSrc: 'images/portfolio/dabubble.png',
       imageAlt: 'DABubble project preview',
+      liveLink: 'https://example.com/dabubble',
+      githubLink: 'https://github.com/example/dabubble',
       reverse: false,
     },
     {
@@ -43,6 +61,8 @@ export class Portfolio {
       description: 'API based project for browsing pokemon data and detail views.',
       imageSrc: 'images/portfolio/pokedex.png',
       imageAlt: 'Pokedex project preview',
+      liveLink: 'https://example.com/pokedex',
+      githubLink: 'https://github.com/example/pokedex',
       reverse: true,
     },
   ];

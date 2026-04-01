@@ -10,6 +10,11 @@
       <h3 class="project-card__title">{{ title }}</h3>
       <p class="project-card__subtitle">{{ subtitle }}</p>
       <p class="project-card__description">{{ description }}</p>
+
+      <div class="project-card__actions">
+        <a class="project-card__link" [href]="liveLink" target="_blank" rel="noreferrer">Live test</a>
+        <a class="project-card__link" [href]="githubLink" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     </div>
   </div>
 </article>
