@@ -24,8 +24,9 @@ export class Portfolio {
     {
       projectNumber: '01/04',
       title: 'Join',
-      subtitle: 'Task manager application',
-      description: 'Kanban project management tool for creating and organizing tasks.',
+      subtitle: 'Angular | TypeScript | HTML | CSS | Firebase',
+      description:
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageSrc: 'images/portfolio/join.png',
       imageAlt: 'Join project preview',
       liveLink: 'https://example.com/join',
@@ -35,8 +36,9 @@ export class Portfolio {
     {
       projectNumber: '02/04',
       title: 'Sharkie',
-      subtitle: '2D browser game',
-      description: 'Side-scrolling game project with keyboard controls and level logic.',
+      subtitle: 'JavaScript | HTML | CSS',
+      description:
+        'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       imageSrc: 'images/portfolio/sharkie.png',
       imageAlt: 'Sharkie project preview',
       liveLink: 'https://example.com/sharkie',
@@ -46,8 +48,9 @@ export class Portfolio {
     {
       projectNumber: '03/04',
       title: 'DABubble',
-      subtitle: 'Chat application',
-      description: 'Messaging app layout with channels, contacts and direct messages.',
+      subtitle: 'Angular | TypeScript | Firebase',
+      description:
+        'This App is a Slack Clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       imageSrc: 'images/portfolio/dabubble.png',
       imageAlt: 'DABubble project preview',
       liveLink: 'https://example.com/dabubble',
@@ -57,8 +60,9 @@ export class Portfolio {
     {
       projectNumber: '04/04',
       title: 'Pokedex',
-      subtitle: 'Pokemon information app',
-      description: 'API based project for browsing pokemon data and detail views.',
+      subtitle: 'JavaScript | HTML | CSS | Api',
+      description:
+        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       imageSrc: 'images/portfolio/pokedex.png',
       imageAlt: 'Pokedex project preview',
       liveLink: 'https://example.com/pokedex',

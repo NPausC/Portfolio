@@ -6,7 +6,7 @@
   &__content {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 1240px;
     margin: 0 auto;
   }
 
@@ -24,8 +24,9 @@
   &__panel {
     position: relative;
     overflow: hidden;
+    width: 100%;
     min-height: 1061px;
-    padding: 148px 98px 42px;
+    padding: 156px 98px 42px;
     background-color: #000000;
     color: #fffcf3;
 
@@ -35,7 +36,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 122px;
+      height: 124px;
       background-color: #fffcf3;
       clip-path: polygon(0 0, 100% 100%, 100% 0, 0 0);
     }
@@ -57,7 +58,7 @@
   &__form-area {
     width: 100%;
     max-width: 650px;
-    margin: 54px auto 0;
+    margin: 52px auto 0;
   }
 
   &__subtitle {
@@ -141,15 +142,11 @@
   }
 
   &__footer {
-    margin-top: 166px;
+    margin-top: 172px;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
     gap: 32px;
-  }
-
-  &__brand-block {
-    align-self: end;
   }
 
   &__logo {
@@ -172,7 +169,7 @@
     align-items: end;
     justify-items: end;
     column-gap: 34px;
-    row-gap: 30px;
+    row-gap: 24px;
   }
 
   &__back-to-top {
@@ -186,14 +183,23 @@
   &__socials {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
   }
 
   &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
     color: #fffcf3;
-    font-size: 18px;
-    line-height: 1;
     text-decoration: none;
+  }
+
+  &__social-icon {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__legal-link {
@@ -204,77 +210,58 @@
 
 @media (max-width: 992px) {
   .contact {
-    padding: 84px 0 0;
+    padding: 72px 24px 0;
 
     &__content {
       max-width: 390px;
     }
 
     &__arrow {
-      display: none;
+      top: -42px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
     }
 
     &__panel {
-      min-height: 940px;
-      padding: 58px 20px 36px;
+      min-height: auto;
+      padding: 86px 24px 32px;
 
       &::before {
-        height: 78px;
+        height: 72px;
       }
     }
 
     &__title {
-      font-size: 72px;
+      font-size: 64px;
     }
 
     &__form-area {
       max-width: 100%;
-      margin-top: 34px;
+      margin-top: 32px;
     }
 
-    &__subtitle {
-      font-size: 32px;
-    }
-
+    &__subtitle,
     &__text {
       font-size: 16px;
-      line-height: 1.35;
-    }
-
-    &__form {
-      gap: 24px;
-      margin-top: 30px;
-    }
-
-    &__textarea {
-      min-height: 134px;
-    }
-
-    &__button {
-      min-width: 176px;
     }
 
     &__footer {
-      margin-top: 84px;
+      margin-top: 72px;
       grid-template-columns: 1fr;
-      justify-items: center;
       gap: 28px;
     }
 
     &__footer-right {
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      justify-items: center;
+      justify-items: start;
       row-gap: 18px;
     }
 
     &__back-to-top {
       grid-column: auto;
-      font-size: 34px;
-    }
-
-    &__logo {
-      font-size: 34px;
+      order: -1;
+      font-size: 52px;
     }
   }
 }

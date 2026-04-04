@@ -1,10 +1,11 @@
 .privacy-policy {
-  padding: 0 24px 48px;
-  background-color: #f1f1f1;
+  padding: 0;
+  background-color: #000000;
 
   &__page {
     overflow: hidden;
     min-height: 1213px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-color: #fffcf3;
@@ -105,10 +106,24 @@
   &__socials {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 24px;
   }
 
-  &__social-link,
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    text-decoration: none;
+  }
+
+  &__social-icon {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   &__footer-link {
     color: #fffcf3;
     font-size: 16px;
@@ -119,40 +134,37 @@
 
 @media (max-width: 992px) {
   .privacy-policy {
-    padding: 0;
+    padding: 0 24px 32px;
 
-    &__header {
-      padding: 0 20px;
+    &__page {
+      min-height: auto;
     }
 
-    &__logo,
-    &__footer-logo {
-      font-size: 30px;
+    &__header {
+      padding: 0 24px;
     }
 
     &__content {
-      padding: 28px 20px 54px;
+      padding: 28px 24px 48px;
     }
 
     &__title {
-      margin-bottom: 34px;
       font-size: 56px;
+      margin-bottom: 28px;
     }
 
     &__subtitle {
-      font-size: 20px;
+      font-size: 16px;
     }
 
     &__footer {
       flex-direction: column;
-      align-items: center;
-      padding: 28px 20px;
+      align-items: flex-start;
+      padding: 28px 24px;
     }
 
-    &__brand-block,
     &__footer-right {
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
     }
   }
 }

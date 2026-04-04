@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 188px 24px 0;
+  padding: 172px 0 0;
   background-color: #fffcf3;
 
   &__content {
@@ -28,19 +28,19 @@
   &__projects {
     width: 100%;
     max-width: 1242px;
-    margin-top: 72px;
+    margin-top: 78px;
     display: flex;
     flex-direction: column;
-    gap: 78px;
+    gap: 112px;
   }
 }
 
 @media (max-width: 992px) {
   .portfolio {
-    padding: 146px 24px 0;
+    padding: 120px 24px 0;
 
     &__content {
-      min-height: 2567.28px;
+      min-height: 2567px;
     }
 
     &__title {
@@ -49,15 +49,12 @@
 
     &__intro {
       max-width: 310px;
-      margin-top: 16px;
       font-size: 16px;
-      line-height: 1.35;
     }
 
     &__projects {
-      max-width: 390px;
-      margin-top: 42px;
-      gap: 54px;
+      margin-top: 48px;
+      gap: 56px;
     }
   }
 }

@@ -1,9 +1,10 @@
 <article class="project-card" [class.project-card--reverse]="reverse">
-  <span class="project-card__number">{{ projectNumber }}</span>
-
   <div class="project-card__content">
-    <div class="project-card__image-wrapper">
-      <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
+    <div class="project-card__visual">
+      <span class="project-card__number">{{ projectNumber }}</span>
+      <div class="project-card__image-wrapper">
+        <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
+      </div>
     </div>
 
     <div class="project-card__text">
@@ -12,8 +13,7 @@
       <p class="project-card__description">{{ description }}</p>
 
       <div class="project-card__actions">
-        <a class="project-card__link" [href]="liveLink" target="_blank" rel="noreferrer">Live test</a>
-        <a class="project-card__link" [href]="githubLink" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="project-card__link" [href]="githubLink" target="_blank" rel="noreferrer">Github</a>
       </div>
     </div>
   </div>

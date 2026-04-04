@@ -1,10 +1,10 @@
 .references {
-  padding: 206px 24px 0;
+  padding: 184px 0 0;
   background-color: #fffcf3;
 
   &__content {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1240px;
     min-height: 565px;
     margin: 0 auto;
     display: flex;
@@ -19,7 +19,6 @@
     line-height: 1;
     letter-spacing: -0.04em;
     text-align: center;
-    border-bottom: 4px solid #b54cff;
   }
 
   &__intro {
@@ -32,11 +31,10 @@
 
   &__cards {
     width: 100%;
-    max-width: 1440px;
     margin-top: 42px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: 18px;
   }
 
   &__card {
@@ -48,14 +46,18 @@
 
     &--active {
       border-color: #00d7b7;
+
+      .references__quote {
+        color: #00d7b7;
+      }
     }
   }
 
   &__quote {
     display: block;
     margin-bottom: 14px;
-    font-size: 36px;
-    line-height: 1;
+    font-size: 54px;
+    line-height: 0.5;
     font-weight: 700;
   }
 
@@ -81,7 +83,7 @@
 
 @media (max-width: 992px) {
   .references {
-    padding: 120px 24px 0;
+    padding: 136px 24px 0;
 
     &__content {
       min-height: 1274px;
@@ -92,36 +94,12 @@
     }
 
     &__intro {
-      max-width: 310px;
-      margin-top: 18px;
+      max-width: 330px;
       font-size: 16px;
-      line-height: 1.35;
-      text-align: left;
     }
 
     &__cards {
-      max-width: 391px;
-      margin-top: 28px;
       grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    &__card {
-      min-height: 0;
-      padding: 24px 14px 18px;
-    }
-
-    &__quote {
-      margin-bottom: 10px;
-      font-size: 28px;
-    }
-
-    &__card-name {
-      font-size: 24px;
-    }
-
-    &__card-text {
-      margin-top: 20px;
     }
   }
 }
