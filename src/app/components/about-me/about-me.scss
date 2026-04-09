@@ -25,7 +25,9 @@
 
   &__title {
     margin: 0 0 34px;
-    font-size: 64px;
+    font-family: 'Syne', sans-serif;
+    font-size: 78px;
+    font-weight: 800;
     line-height: 0.95;
     letter-spacing: -0.04em;
     white-space: nowrap;
@@ -34,7 +36,9 @@
   &__description {
     max-width: 470px;
     margin: 0;
-    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
     line-height: 1.18;
 
     &--second {
@@ -65,7 +69,9 @@
 
   &__detail {
     margin: 0;
-    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
     line-height: 1.2;
   }
 
@@ -73,11 +79,13 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-width: 144px;
-    min-height: 46px;
+    width: 213px;
+    min-width: 213px;
+    height: 68px;
+    min-height: 68px;
     margin-top: 36px;
     margin-left: 134px;
-    padding: 10px 20px;
+    padding: 0 20px;
     border: 3px solid #000000;
     background-color: transparent;
     color: #000000;

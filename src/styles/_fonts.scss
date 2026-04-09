@@ -7,6 +7,13 @@
 
 @font-face {
   font-family: 'Syne';
+  src: url('../../public/assets/fonts/syne/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Syne';
   src: url('../../public/assets/fonts/syne/Syne-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;

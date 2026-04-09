@@ -1,5 +1,7 @@
 <section id="portfolio" class="portfolio">
   <div class="page-container portfolio__content">
+    <div class="portfolio__spacer" aria-hidden="true"></div>
+
     <h2 class="portfolio__title">Portfolio</h2>
 
     <p class="portfolio__intro">
@@ -17,7 +19,7 @@
           [imageAlt]="project.imageAlt"
           [liveLink]="project.liveLink"
           [githubLink]="project.githubLink"
-          [reverse]="project.reverse"
+          [reverse]="$index % 2 === 1"
         ></app-project-card>
       }
     </div>

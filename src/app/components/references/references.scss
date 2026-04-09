@@ -15,16 +15,20 @@
   &__title {
     display: inline-block;
     margin: 0;
-    font-size: 68px;
+    font-family: 'Syne', sans-serif;
+    font-size: 78px;
+    font-weight: 800;
     line-height: 1;
     letter-spacing: -0.04em;
     text-align: center;
   }
 
   &__intro {
-    max-width: 404px;
+    max-width: 700px;
     margin: 12px 0 0;
-    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
     line-height: 1.28;
     text-align: center;
   }
@@ -37,6 +41,26 @@
     gap: 18px;
   }
 
+  &__spacer {
+    position: relative;
+    width: 100%;
+    max-width: 1239px;
+    min-height: 300px;
+    margin-top: 18px;
+  }
+
+  &__spacer-arrow {
+    position: absolute;
+    top: 38px;
+    right: 48px;
+    width: 104px;
+    height: 104px;
+    border-left: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+
   &__card {
     min-height: 238px;
     padding: 18px 16px 16px;
@@ -46,10 +70,10 @@
     box-sizing: border-box;
 
     &--active {
-      border-color: #00d7b7;
+      border-color: #000000;
 
       .references__quote {
-        color: #00d7b7;
+        color: #000000;
       }
     }
   }
@@ -105,6 +129,21 @@
       margin-top: 26px;
       grid-template-columns: 1fr;
       gap: 16px;
+    }
+
+    &__spacer {
+      max-width: 391px;
+      min-height: 180px;
+      margin-top: 16px;
+    }
+
+    &__spacer-arrow {
+      top: 24px;
+      right: 24px;
+      width: 72px;
+      height: 72px;
+      border-left-width: 3px;
+      border-bottom-width: 3px;
     }
 
     &__card {
