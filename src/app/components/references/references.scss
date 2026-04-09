@@ -1,5 +1,5 @@
 .references {
-  padding: 184px 0 0;
+  padding: 118px 0 0;
   background-color: #fffcf3;
 
   &__content {
@@ -15,34 +15,35 @@
   &__title {
     display: inline-block;
     margin: 0;
-    font-size: 64px;
+    font-size: 68px;
     line-height: 1;
     letter-spacing: -0.04em;
     text-align: center;
   }
 
   &__intro {
-    max-width: 620px;
-    margin: 22px 0 0;
-    font-size: 22px;
-    line-height: 1.2;
+    max-width: 404px;
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 1.28;
     text-align: center;
   }
 
   &__cards {
     width: 100%;
-    margin-top: 42px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
   }
 
   &__card {
-    min-height: 275px;
-    padding: 28px 18px 22px;
-    border: 4px solid #000000;
+    min-height: 238px;
+    padding: 18px 16px 16px;
+    border: 2px solid #000000;
     background-color: #fffcf3;
     text-align: center;
+    box-sizing: border-box;
 
     &--active {
       border-color: #00d7b7;
@@ -55,51 +56,69 @@
 
   &__quote {
     display: block;
-    margin-bottom: 14px;
-    font-size: 54px;
-    line-height: 0.5;
+    margin-bottom: 8px;
+    font-size: 34px;
+    line-height: 0.6;
     font-weight: 700;
   }
 
   &__card-name {
     margin: 0;
-    font-size: 32px;
-    line-height: 1.1;
+    font-size: 18px;
+    line-height: 1.12;
   }
 
   &__card-role {
-    margin: 8px 0 0;
+    margin: 4px 0 0;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   &__card-text {
-    margin: 28px 0 0;
+    margin: 14px 0 0;
     font-size: 16px;
-    line-height: 1.35;
+    line-height: 1.32;
     text-align: left;
   }
 }
 
 @media (max-width: 992px) {
   .references {
-    padding: 136px 24px 0;
+    padding-top: 100px;
 
     &__content {
+      max-width: 391px;
       min-height: 1274px;
     }
 
     &__title {
-      font-size: 48px;
+      font-size: 52px;
     }
 
     &__intro {
-      max-width: 330px;
+      max-width: 272px;
+      margin-top: 14px;
       font-size: 16px;
     }
 
     &__cards {
+      margin-top: 26px;
       grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    &__card {
+      min-height: 0;
+      padding: 22px 18px 18px;
+    }
+
+    &__card-name {
+      font-size: 24px;
+    }
+
+    &__card-text {
+      font-size: 16px;
+      line-height: 1.35;
     }
   }
 }

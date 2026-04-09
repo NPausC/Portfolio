@@ -1,5 +1,5 @@
 .about-me {
-  padding: 64px 0 0;
+  padding: 78px 0 0;
   background-color: #fffcf3;
 
   &__card {
@@ -8,32 +8,37 @@
     max-width: 1259px;
     min-height: 681px;
     margin: 0 auto;
-    padding: 18px 0 72px;
+    padding: 0 0 74px;
     display: grid;
-    grid-template-columns: minmax(0, 610px) 405px;
+    grid-template-columns: 619px 533px;
     justify-content: space-between;
-    gap: 46px;
+    align-items: start;
     background-color: #fffcf3;
+    box-sizing: border-box;
   }
 
   &__text-block {
-    padding-top: 18px;
+    width: 619px;
+    min-height: 426px;
+    padding-top: 8px;
   }
 
   &__title {
     margin: 0 0 34px;
-    font-size: 86px;
-    line-height: 0.9;
+    font-size: 64px;
+    line-height: 0.95;
     letter-spacing: -0.04em;
+    white-space: nowrap;
   }
 
   &__description {
+    max-width: 470px;
     margin: 0;
-    font-size: 22px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.18;
 
     &--second {
-      margin-top: 14px;
+      margin-top: 10px;
     }
   }
 
@@ -41,26 +46,26 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    margin-top: 34px;
+    margin-top: 36px;
   }
 
   &__detail-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   &__detail-icon {
     display: block;
-    width: 28px;
-    min-width: 28px;
-    height: 28px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
     object-fit: contain;
   }
 
   &__detail {
     margin: 0;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.2;
   }
 
@@ -68,38 +73,43 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    min-width: 144px;
+    min-height: 46px;
     margin-top: 36px;
-    min-width: 174px;
-    min-height: 58px;
-    padding: 14px 28px;
+    margin-left: 134px;
+    padding: 10px 20px;
     border: 3px solid #000000;
     background-color: transparent;
     color: #000000;
     font-family: 'Overpass', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
     text-decoration: none;
     box-sizing: border-box;
   }
 
   &__image-wrapper {
-    position: relative;
-    align-self: start;
-    width: 100%;
-    padding-top: 52px;
+    width: 533px;
+    height: 533px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 109px;
+    box-sizing: border-box;
   }
 
   &__image {
     display: block;
-    width: 100%;
-    height: 515px;
+    width: 533px;
+    height: 533px;
     object-fit: cover;
+    object-position: center top;
   }
 
   &__arrow {
     position: absolute;
-    right: 44px;
-    bottom: -28px;
+    right: 86px;
+    bottom: 18px;
     width: 78px;
     height: 78px;
     border-left: 4px solid #000000;
@@ -110,43 +120,71 @@
 
 @media (max-width: 992px) {
   .about-me {
-    padding: 48px 24px 0;
+    padding-top: 36px;
 
     &__card {
       max-width: 362px;
       min-height: 1172px;
-      padding: 18px 0 72px;
+      padding: 0 0 76px;
       grid-template-columns: 1fr;
       gap: 32px;
     }
 
-    &__title {
-      margin-bottom: 28px;
-      font-size: 56px;
-    }
-
-    &__description,
-    &__detail {
-      font-size: 16px;
-    }
-
-    &__button {
-      min-height: 54px;
-    }
-
-    &__image-wrapper {
+    &__text-block {
+      width: 100%;
+      min-height: 0;
       padding-top: 0;
     }
 
+    &__title {
+      margin-bottom: 24px;
+      font-size: 52px;
+      white-space: normal;
+    }
+
+    &__description {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    &__details {
+      margin-top: 24px;
+      gap: 12px;
+    }
+
+    &__detail {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    &__button {
+      margin-top: 26px;
+      margin-left: 0;
+      min-width: 188px;
+      min-height: 58px;
+      font-size: 16px;
+    }
+
+    &__image-wrapper {
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     &__image {
-      height: 525px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1.18;
     }
 
     &__arrow {
-      right: 32px;
-      bottom: -12px;
-      width: 64px;
-      height: 64px;
+      right: 40px;
+      bottom: 6px;
+      width: 76px;
+      height: 76px;
     }
   }
 }

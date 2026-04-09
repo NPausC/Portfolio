@@ -1,11 +1,18 @@
 <article class="project-card" [class.project-card--reverse]="reverse">
   <div class="project-card__content">
-    <div class="project-card__visual">
+    @if (reverse) {
       <span class="project-card__number">{{ projectNumber }}</span>
+    }
+
+    <div class="project-card__visual">
       <div class="project-card__image-wrapper">
         <img class="project-card__image" [src]="imageSrc" [alt]="imageAlt" />
       </div>
     </div>
+
+    @if (!reverse) {
+      <span class="project-card__number">{{ projectNumber }}</span>
+    }
 
     <div class="project-card__text">
       <h3 class="project-card__title">{{ title }}</h3>

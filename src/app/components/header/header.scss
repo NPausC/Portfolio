@@ -129,7 +129,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      width: calc((100% - min(100%, 1240px)) / 2);
+      width: calc((100% - min(100%, 1440px)) / 2);
       background-color: #000000;
     }
 
@@ -151,7 +151,7 @@
   &__menu-shell {
     display: flex;
     flex-direction: column;
-    width: min(100%, 1240px);
+    width: min(100%, 1440px);
     margin: 0 auto;
     padding: 0;
   }

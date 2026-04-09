@@ -1,20 +1,21 @@
 .project-card {
   &__content {
     display: grid;
-    grid-template-columns: minmax(0, 620px) 360px;
-    align-items: end;
+    grid-template-columns: minmax(0, 560px) minmax(0, 280px);
+    align-items: start;
     justify-content: space-between;
-    gap: 82px;
+    gap: 72px;
   }
 
   &__visual {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    position: relative;
+    padding-top: 34px;
   }
 
   &__number {
-    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    right: -74px;
     font-size: 54px;
     line-height: 1;
     font-weight: 700;
@@ -33,9 +34,10 @@
   &__text {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    max-width: 360px;
-    padding-bottom: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 280px;
+    padding-top: 198px;
   }
 
   &__title,
@@ -45,42 +47,42 @@
   }
 
   &__title {
-    font-size: 54px;
+    font-size: 44px;
     line-height: 0.95;
   }
 
   &__subtitle {
     color: #00d7b7;
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.25;
   }
 
   &__description {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.35;
   }
 
   &__actions {
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 124px;
-    min-height: 48px;
-    padding: 12px 24px;
-    border: 2px solid #000000;
+    min-width: 126px;
+    min-height: 44px;
+    padding: 10px 22px;
+    border: 3px solid #000000;
     color: #000000;
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 18px;
+    line-height: 1.1;
     text-decoration: none;
   }
 
   &--reverse {
     .project-card__content {
-      grid-template-columns: 360px minmax(0, 620px);
+      grid-template-columns: minmax(0, 280px) minmax(0, 560px);
     }
 
     .project-card__visual {
@@ -88,43 +90,42 @@
     }
 
     .project-card__number {
-      align-self: flex-start;
+      left: -74px;
+      right: auto;
+      top: 0;
     }
 
     .project-card__text {
       order: 1;
-      align-items: flex-start;
-      text-align: left;
-      justify-self: start;
     }
   }
 }
 
 @media (max-width: 992px) {
   .project-card {
-    &__content,
-    &--reverse .project-card__content {
+    &__content {
       grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 24px;
     }
 
-    &__visual,
-    &--reverse .project-card__visual {
+    &__visual {
       order: 1;
+      padding-top: 0;
     }
 
-    &__text,
-    &--reverse .project-card__text {
+    &__number {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      left: auto;
+      font-size: 36px;
+    }
+
+    &__text {
       order: 2;
-      align-items: flex-start;
-      text-align: left;
+      gap: 10px;
       max-width: 100%;
-    }
-
-    &__number,
-    &--reverse .project-card__number {
-      align-self: flex-end;
-      font-size: 24px;
+      padding-top: 0;
     }
 
     &__title {
@@ -133,6 +134,43 @@
 
     &__subtitle {
       font-size: 16px;
+      line-height: 1.3;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    &__actions {
+      margin-top: 8px;
+    }
+
+    &__link {
+      min-width: 124px;
+      min-height: 48px;
+      padding: 12px 24px;
+      border-width: 2px;
+      font-size: 16px;
+    }
+
+    &--reverse {
+      .project-card__content {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card__visual {
+        order: 1;
+      }
+
+      .project-card__number {
+        right: 0;
+        left: auto;
+      }
+
+      .project-card__text {
+        order: 2;
+      }
     }
   }
 }

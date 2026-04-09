@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 172px 0 0;
+  padding: 126px 0 0;
   background-color: #fffcf3;
 
   &__content {
@@ -11,50 +11,53 @@
 
   &__title {
     margin: 0;
-    font-size: 64px;
+    font-size: 68px;
     line-height: 1;
     letter-spacing: -0.04em;
     text-align: center;
   }
 
   &__intro {
-    max-width: 465px;
-    margin: 18px 0 0;
-    font-size: 22px;
-    line-height: 1.25;
+    max-width: 390px;
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 1.3;
     text-align: center;
   }
 
   &__projects {
     width: 100%;
-    max-width: 1242px;
-    margin-top: 78px;
+    max-width: 1240px;
+    margin-top: 64px;
     display: flex;
     flex-direction: column;
-    gap: 112px;
+    gap: 104px;
   }
 }
 
 @media (max-width: 992px) {
   .portfolio {
-    padding: 120px 24px 0;
+    padding-top: 108px;
 
     &__content {
       min-height: 2567px;
     }
 
     &__title {
-      font-size: 48px;
+      font-size: 52px;
     }
 
     &__intro {
-      max-width: 310px;
+      max-width: 285px;
+      margin-top: 14px;
       font-size: 16px;
+      line-height: 1.35;
     }
 
     &__projects {
+      max-width: 390px;
       margin-top: 48px;
-      gap: 56px;
+      gap: 76px;
     }
   }
 }

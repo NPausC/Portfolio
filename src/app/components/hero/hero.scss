@@ -1,25 +1,28 @@
 .hero {
-  padding: 0 24px 0;
+  padding: 0;
   background-color: #fffcf3;
   color: #000000;
 
   &__content {
     position: relative;
-    min-height: 580px;
+    width: 100%;
+    max-width: 1240px;
+    min-height: 561px;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 32px;
-    padding: 72px 76px 24px;
+    justify-content: center;
+    padding: 112px 0 0;
+    box-sizing: border-box;
   }
 
   &__mail-link {
     position: absolute;
-    left: 28px;
-    top: auto;
-    bottom: 76px;
+    left: 0;
+    bottom: 40px;
     color: #000000;
     font-size: 18px;
+    line-height: 1;
     text-decoration: none;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -28,8 +31,7 @@
   &__headline-block {
     width: 100%;
     max-width: 1240px;
-    min-height: 420px;
-    margin: 0 auto;
+    min-height: 561px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,10 +45,10 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Syne', sans-serif;
-    font-size: 118px;
+    font-size: 128px;
     font-weight: 800;
-    line-height: 0.9;
-    letter-spacing: -0.04em;
+    line-height: 1;
+    letter-spacing: -0.025em;
     text-align: center;
   }
 
@@ -60,12 +62,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 22px;
-    margin-top: 34px;
+    gap: 18px;
+    margin-top: 18px;
   }
 
   &__name-line {
-    width: 610px;
+    width: 585px;
     height: 3px;
     background-color: #000000;
   }
@@ -74,7 +76,7 @@
     margin: 0;
     color: #00d7b7;
     font-family: 'Overpass', sans-serif;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 700;
     line-height: 1;
     text-align: right;
@@ -82,25 +84,25 @@
 
   &__scroll {
     position: absolute;
-    right: 76px;
-    bottom: 18px;
+    right: 0;
+    bottom: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
   }
 
   &__scroll-arrow {
-    width: 34px;
-    height: 34px;
-    border-right: 3px solid #000000;
-    border-bottom: 3px solid #000000;
+    width: 42px;
+    height: 42px;
+    border-right: 4px solid #000000;
+    border-bottom: 4px solid #000000;
     transform: rotate(45deg);
   }
 
   &__scroll-text {
-    max-width: 54px;
-    font-size: 18px;
+    max-width: 58px;
+    font-size: 16px;
     line-height: 1.1;
     text-align: center;
   }
@@ -120,7 +122,6 @@
 
     &__mail-link {
       left: 12px;
-      top: auto;
       bottom: 92px;
       font-size: 16px;
       transform: rotate(180deg);
@@ -129,7 +130,6 @@
     &__headline-block {
       max-width: 396px;
       min-height: 420px;
-      margin: 0;
       align-items: flex-start;
     }
 
