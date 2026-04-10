@@ -64,7 +64,7 @@
 
     &__spacer {
       min-height: 140px;
-      max-width: 390px;
+      max-width: 320px;
     }
 
     &__spacer-arrow {
@@ -81,20 +81,20 @@
     }
 
     &__title {
-      font-size: 52px;
+      font-size: 32px;
     }
 
     &__intro {
-      max-width: 285px;
+      max-width: 300px;
       margin-top: 14px;
       font-size: 16px;
       line-height: 1.35;
     }
 
     &__projects {
-      max-width: 390px;
+      max-width: 320px;
       margin-top: 48px;
-      gap: 76px;
+      gap: 260px;
     }
   }
 }

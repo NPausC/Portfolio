@@ -111,16 +111,16 @@
     padding-top: 100px;
 
     &__content {
-      max-width: 391px;
-      min-height: 1274px;
+      max-width: min(300px, calc(100vw - 40px));
+      min-height: auto;
     }
 
     &__title {
-      font-size: 52px;
+      font-size: 32px;
     }
 
     &__intro {
-      max-width: 272px;
+      max-width: 300px;
       margin-top: 14px;
       font-size: 16px;
     }
@@ -132,7 +132,7 @@
     }
 
     &__spacer {
-      max-width: 391px;
+      max-width: min(300px, calc(100vw - 40px));
       min-height: 180px;
       margin-top: 16px;
     }
@@ -148,11 +148,11 @@
 
     &__card {
       min-height: 0;
-      padding: 22px 18px 18px;
+      padding: 22px 14px 18px;
     }
 
     &__card-name {
-      font-size: 24px;
+      font-size: 22px;
     }
 
     &__card-text {

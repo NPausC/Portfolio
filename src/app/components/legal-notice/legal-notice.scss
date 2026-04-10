@@ -382,7 +382,13 @@
 
 @media (max-width: 992px) {
   .legal-notice {
-    padding: 0 16px;
+    padding: 0;
+
+    &__page {
+      max-width: 320px;
+      min-height: auto;
+      overflow-x: clip;
+    }
 
     &__content,
     &__menu-topbar {

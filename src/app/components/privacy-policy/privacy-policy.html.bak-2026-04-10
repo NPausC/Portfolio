@@ -13,19 +13,11 @@
       <div class="privacy-policy__menu-shell" (click)="$event.stopPropagation()">
         <div class="privacy-policy__menu-topbar">
           <a class="privacy-policy__logo" routerLink="/" (click)="closeMenu()">[NP]</a>
-
-          <div class="privacy-policy__actions">
-            <div class="privacy-policy__language-switch">
-              <button class="privacy-policy__language-button privacy-policy__language-button--active" type="button">EN</button>
-              <button class="privacy-policy__language-button" type="button">DE</button>
-            </div>
-
-            <button class="privacy-policy__menu-button privacy-policy__menu-button--open" type="button" aria-label="Close menu" (click)="closeMenu()">
-              <span class="privacy-policy__menu-line"></span>
-              <span class="privacy-policy__menu-line"></span>
-              <span class="privacy-policy__menu-line"></span>
-            </button>
-          </div>
+          <button class="privacy-policy__menu-button privacy-policy__menu-button--open" type="button" aria-label="Close menu" (click)="closeMenu()">
+            <span class="privacy-policy__menu-line"></span>
+            <span class="privacy-policy__menu-line"></span>
+            <span class="privacy-policy__menu-line"></span>
+          </button>
         </div>
 
         <div class="privacy-policy__menu-body">
@@ -78,8 +70,6 @@
       <div class="privacy-policy__brand-block">
         <span class="privacy-policy__footer-logo">[NP]</span>
         <p class="privacy-policy__copyright">© Norman Pfalzer 2022</p>
-        <a class="privacy-policy__footer-email" href="mailto:n.pfalzer@kabelmail.de">n.pfalzer@kabelmail.de</a>
-        <a class="privacy-policy__footer-link privacy-policy__footer-link--mobile" routerLink="/legal-notice">Legal notice</a>
       </div>
 
       <div class="privacy-policy__footer-right">

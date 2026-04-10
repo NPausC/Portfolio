@@ -131,23 +131,27 @@
     padding-top: 36px;
 
     &__card {
-      max-width: 362px;
-      min-height: 1172px;
+      max-width: 300px;
+      min-height: auto;
       padding: 0 0 76px;
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 12px;
     }
 
     &__text-block {
       width: 100%;
-      min-height: 0;
+      max-width: 300px;
+      min-height: auto;
+      margin: 0 auto;
       padding-top: 0;
+      text-align: center;
     }
 
     &__title {
       margin-bottom: 24px;
-      font-size: 52px;
-      white-space: normal;
+      font-size: 32px;
+      white-space: nowrap;
+      text-align: center;
     }
 
     &__description {
@@ -159,6 +163,7 @@
     &__details {
       margin-top: 24px;
       gap: 12px;
+      align-items: center;
     }
 
     &__detail {
@@ -168,24 +173,25 @@
 
     &__button {
       margin-top: 26px;
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: auto;
       min-width: 188px;
       min-height: 58px;
       font-size: 16px;
     }
 
     &__image-wrapper {
-      width: 100%;
-      height: auto;
-      margin-top: 0;
+      width: 300px;
+      height: 300px;
+      margin: 12px auto 0;
       justify-content: center;
       align-items: flex-start;
     }
 
     &__image {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 1.18;
+      width: 300px;
+      height: 300px;
+      aspect-ratio: auto;
     }
 
     &__arrow {

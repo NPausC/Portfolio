@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   font-family: 'Overpass', sans-serif;
   background-color: #000000;
   color: #000000;
+  overflow-x: hidden;
 }
 
 * {
@@ -38,3 +40,19 @@ label {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+@media (max-width: 992px) {
+  .page-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow-x: clip;
+  }
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+

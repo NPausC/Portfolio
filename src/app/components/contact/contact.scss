@@ -67,7 +67,7 @@
   &__text {
     margin: 12px 0 0;
     font-family: 'Overpass', sans-serif;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
     color: #fffcf3;
@@ -225,6 +225,16 @@
     color: #fffcf3;
     text-decoration: none;
   }
+
+  &__mail-link {
+    display: none;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fffcf3;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -232,10 +242,7 @@
     padding-top: 72px;
 
     &__arrow {
-      right: 28px;
-      top: -28px;
-      width: 52px;
-      height: 52px;
+      display: none;
     }
 
     &__content {
@@ -244,25 +251,33 @@
     }
 
     &__panel {
-      min-height: 905px;
-      padding: 96px 24px 30px;
-      clip-path: polygon(0 54px, 100% 112px, 100% 100%, 0 100%);
+      width: 100%;
+      max-width: 320px;
+      min-height: auto;
+      margin: 0 auto;
+      padding: 72px 20px 34px;
+      clip-path: polygon(0 28px, 100% 44px, 100% 100%, 0 100%);
     }
 
     &__title {
-      font-size: 62px;
+      font-size: 32px;
     }
 
     &__form-area {
       max-width: 100%;
-      margin-top: 34px;
+      margin-top: 28px;
     }
 
     &__subtitle {
-      font-size: 20px;
+      font-size: 32px;
+      line-height: 1.2;
     }
 
-    &__text,
+    &__text {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
     &__input,
     &__textarea,
     &__button,
@@ -270,38 +285,75 @@
       font-size: 16px;
     }
 
+    &__form {
+      gap: 20px;
+      margin-top: 32px;
+    }
+
     &__textarea {
       min-height: 120px;
     }
 
+    &__checkbox-text {
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    &__button {
+      width: 230px;
+      min-width: 230px;
+      height: 68px;
+      min-height: 68px;
+      margin-top: 8px;
+    }
+
     &__footer {
-      grid-template-columns: 1fr;
-      gap: 22px;
-      margin-top: 92px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      margin-top: 64px;
+    }
+
+    &__brand-block {
+      order: 2;
+      align-items: center;
+      gap: 0;
+    }
+
+    &__logo {
+      font-size: 28px;
+    }
+
+    &__copyright {
+      display: none;
     }
 
     &__footer-right {
-      grid-template-columns: 1fr;
-      row-gap: 18px;
+      display: contents;
+      order: 1;
     }
 
     &__back-to-top {
-      grid-column: auto;
-      grid-row: auto;
-      justify-self: end;
-      width: 28px;
-      height: 28px;
+      display: none;
     }
 
     &__socials {
-      grid-column: auto;
-      grid-row: auto;
+      order: 1;
       justify-content: center;
+      gap: 16px;
+    }
+
+    &__mail-link {
+      display: block;
+      order: 3;
+      text-align: center;
     }
 
     &__legal-link {
-      grid-column: auto;
-      grid-row: auto;
+      display: block;
+      order: 4;
+      text-align: center;
       justify-self: center;
     }
   }
