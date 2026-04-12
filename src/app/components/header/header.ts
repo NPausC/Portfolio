@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Header {
   menuIsOpen = false;
+  selectedLanguage: "EN" | "DE" = "EN";
 
   menuItems = [
     { label: 'About me', target: '#about-me' },
@@ -21,5 +22,9 @@ export class Header {
 
   closeMenu(): void {
     this.menuIsOpen = false;
+  }
+
+  setLanguage(language: "EN" | "DE"): void {
+    this.selectedLanguage = language;
   }
 }

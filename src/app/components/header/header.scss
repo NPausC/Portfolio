@@ -39,6 +39,7 @@
   }
 
   &__language-button {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +55,26 @@
     line-height: 1;
     cursor: pointer;
     flex-shrink: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 2px;
+      width: 30px;
+      height: 4px;
+      background-color: #000000;
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      opacity: 0;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    &:hover:not(.header__language-button--active)::after,
+    &:focus-visible:not(.header__language-button--active)::after {
+      transform: translateX(-50%) scaleX(1);
+      opacity: 1;
+    }
 
     &--active {
       border-color: #00d7b7;

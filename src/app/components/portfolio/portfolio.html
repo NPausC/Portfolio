@@ -1,6 +1,10 @@
 <section id="portfolio" class="portfolio">
   <div class="page-container portfolio__content">
-    <div class="portfolio__spacer" aria-hidden="true"></div>
+    <div class="portfolio__spacer" aria-hidden="true">
+      <div class="portfolio__spacer-arrow" [class.portfolio__spacer-arrow--animate]="arrowIsAnimating" #spacerArrow>
+        <img class="portfolio__spacer-arrow-image" src="assets/images/interactions/skills/about-to-skills-arrow-frame-2.png" alt="" />
+      </div>
+    </div>
 
     <h2 class="portfolio__title">Portfolio</h2>
 

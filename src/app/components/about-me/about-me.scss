@@ -90,13 +90,16 @@
     background-color: transparent;
     color: #000000;
     font-family: 'Overpass', sans-serif;
-    font-size: 18px;
+    font-size: 23px;
+    font-weight: 400;
     line-height: 1;
     text-decoration: none;
     box-sizing: border-box;
+    transition: width 0.2s ease, min-width 0.2s ease, margin-left 0.2s ease, border-width 0.2s ease, font-weight 0.2s ease;
   }
 
   &__image-wrapper {
+    position: relative;
     width: 533px;
     height: 533px;
     display: flex;
@@ -104,6 +107,35 @@
     align-items: flex-start;
     margin-top: 109px;
     box-sizing: border-box;
+    overflow: visible;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.24s ease;
+    }
+
+    &::before {
+      top: 10px;
+      left: 10px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border-top: 4px solid #ffffff;
+      border-left: 4px solid #ffffff;
+      z-index: 2;
+    }
+
+    &::after {
+      top: 10px;
+      left: 10px;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #000000;
+      z-index: 1;
+    }
   }
 
   &__image {
@@ -123,6 +155,27 @@
     border-left: 4px solid #000000;
     border-bottom: 4px solid #000000;
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 993px) {
+  .about-me {
+    &__image-wrapper:hover::after,
+    &__image-wrapper:focus-within::after,
+    &__image-wrapper:hover::before,
+    &__image-wrapper:focus-within::before {
+      opacity: 1;
+    }
+
+    &__button:hover,
+    &__button:focus-visible {
+      width: 233px;
+      min-width: 233px;
+      margin-left: 124px;
+      border-width: 4px;
+      font-weight: 700;
+      -webkit-text-stroke: 0.2px currentColor;
+    }
   }
 }
 
@@ -156,7 +209,7 @@
 
     &__description {
       max-width: 100%;
-      font-size: 16px;
+      font-size: 23px;
       line-height: 1.3;
     }
 

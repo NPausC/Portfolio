@@ -59,22 +59,26 @@
   &__name-row {
     width: 100%;
     max-width: 926px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 18px;
+    position: relative;
     margin-top: 18px;
+    padding-top: 18px;
   }
 
   &__name-line {
-    width: 585px;
+    display: block;
+    width: 100%;
     height: 3px;
     background-color: #000000;
   }
 
   &__name {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 0;
+    padding-left: 14px;
     color: #00d7b7;
+    background-color: #fffcf3;
     font-family: 'Overpass', sans-serif;
     font-size: 38px;
     font-weight: 700;
@@ -85,29 +89,58 @@
   &__scroll {
     position: absolute;
     right: 0;
-    bottom: 54px;
+    bottom: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 0;
+    isolation: isolate;
   }
 
-  &__scroll-arrow {
-    width: 42px;
-    height: 42px;
-    border-right: 4px solid #000000;
-    border-bottom: 4px solid #000000;
-    transform: rotate(45deg);
+  &__scroll-track {
+    position: relative;
+    width: 52px;
+    height: 104px;
+    overflow: hidden;
+  }
+
+  &__scroll-runner {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 53px;
+    height: 95px;
+    transform: translate(-50%, -34px);
+    background: url("/assets/images/hero/scroll-arrow-head.png") center / contain no-repeat;
+    animation: hero-arrow-drop 1.05s linear infinite;
+    will-change: transform;
   }
 
   &__scroll-text {
+    position: relative;
+    z-index: 2;
     max-width: 58px;
-    font-size: 16px;
+    margin-top: -2px;
+    padding-top: 4px;
+    background-color: #fffcf3;
+    font-size: 22px;
     line-height: 1.1;
     text-align: center;
   }
 }
+@keyframes hero-arrow-drop {
+  0% {
+    transform: translate(-50%, -34px);
+  }
 
+  99% {
+    transform: translate(-50%, 112px);
+  }
+
+  100% {
+    transform: translate(-50%, -34px);
+  }
+}
 @media (max-width: 992px) {
   .hero {
     padding: 0;
@@ -148,22 +181,27 @@
     &__name-row {
       width: 100%;
       max-width: 300px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+      position: relative;
       margin-top: 12px;
+      padding-top: 12px;
     }
 
     &__name-line {
-      flex: 1;
-      min-width: 0;
+      display: block;
+      width: 100%;
       height: 2px;
+      background-color: #000000;
     }
 
     &__name {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding-left: 8px;
+      background-color: #fffcf3;
       font-size: 20px;
-      text-align: center;
-      flex-shrink: 0;
+      text-align: right;
     }
 
     &__scroll {
@@ -172,16 +210,23 @@
       gap: 10px;
     }
 
-    &__scroll-arrow {
-      width: 32px;
-      height: 32px;
-      border-right-width: 2px;
-      border-bottom-width: 2px;
+    &__scroll-track {
+      width: 34px;
+      height: 72px;
+      overflow: hidden;
+    }
+
+    &__scroll-runner {
+      width: 34px;
+      height: 61px;
+      animation: none;
+      transform: translate(-50%, 8px);
+      background: url("/assets/images/hero/scroll-arrow-head.png") center / contain no-repeat;
     }
 
     &__scroll-text {
       max-width: 56px;
-      font-size: 16px;
+      font-size: 22px;
       line-height: 1;
       text-align: center;
     }

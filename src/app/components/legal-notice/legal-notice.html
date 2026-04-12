@@ -13,11 +13,19 @@
       <div class="legal-notice__menu-shell" (click)="$event.stopPropagation()">
         <div class="legal-notice__menu-topbar">
           <a class="legal-notice__logo" routerLink="/" (click)="closeMenu()">[NP]</a>
-          <button class="legal-notice__menu-button legal-notice__menu-button--open" type="button" aria-label="Close menu" (click)="closeMenu()">
-            <span class="legal-notice__menu-line"></span>
-            <span class="legal-notice__menu-line"></span>
-            <span class="legal-notice__menu-line"></span>
-          </button>
+
+          <div class="legal-notice__actions">
+            <div class="legal-notice__language-switch">
+              <button class="legal-notice__language-button legal-notice__language-button--active" type="button">EN</button>
+              <button class="legal-notice__language-button" type="button">DE</button>
+            </div>
+
+            <button class="legal-notice__menu-button legal-notice__menu-button--open" type="button" aria-label="Close menu" (click)="closeMenu()">
+              <span class="legal-notice__menu-line"></span>
+              <span class="legal-notice__menu-line"></span>
+              <span class="legal-notice__menu-line"></span>
+            </button>
+          </div>
         </div>
 
         <div class="legal-notice__menu-body">
@@ -82,6 +90,8 @@
       <div class="legal-notice__brand-block">
         <span class="legal-notice__footer-logo">[NP]</span>
         <p class="legal-notice__copyright">© Norman Pfalzer 2022</p>
+        <a class="legal-notice__footer-email" href="mailto:n.pfalzer@kabelmail.de">n.pfalzer@kabelmail.de</a>
+        <a class="legal-notice__footer-link legal-notice__footer-link--mobile" routerLink="/legal-notice">Legal notice</a>
       </div>
 
       <div class="legal-notice__footer-right">

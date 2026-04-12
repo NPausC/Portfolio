@@ -1,6 +1,41 @@
 .skills {
-  padding: 300px 0 0;
+  padding: 0;
   background-color: #fffcf3;
+
+  &__spacer {
+    position: relative;
+    width: 100%;
+    max-width: 1239px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+
+  &__spacer-arrow {
+    position: absolute;
+    top: 26px;
+    right: 170px;
+    width: 235px;
+    height: 235px;
+    pointer-events: none;
+    transform: translate(0, 0);
+  }
+
+  &__spacer-arrow--animate {
+    animation: skills-arrow-slide 860ms ease-out forwards;
+  }
+
+  &__spacer-arrow-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left top;
+    opacity: 0;
+    user-select: none;
+    display: block;
+    opacity: 1;
+  }
 
   &__card {
     position: relative;
@@ -58,19 +93,48 @@
 
   &__item {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 148px;
+  }
 
-    &--center {
-      grid-column: 3;
-    }
+  &__icon-box {
+    width: 100px;
+    height: 82px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
   }
 
   &__image {
-    display: block;
+    display: inline-block;
     width: 100px;
     height: 104px;
     object-fit: contain;
+    object-position: center top;
+    transform-origin: center center;
+    transition: transform 0.08s linear;
+  }
+
+  &__item:hover .skills__image {
+    animation: skills-icon-hover-jump 0.28s ease-out 1;
+  }
+
+  &__label {
+    font-family: 'Overpass', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: #000000;
+    transition: color 0.18s ease;
+  }
+
+  &__label:hover {
+    color: #00d7b7;
   }
 
   &__footer {
@@ -87,6 +151,12 @@
     min-width: 100px;
     height: 104px;
     object-fit: contain;
+    transform-origin: center center;
+    transition: transform 0.08s linear;
+  }
+
+  &__footer-icon:hover {
+    animation: skills-icon-hover-jump 0.28s ease-out 1;
   }
 
   &__footer-text {
@@ -110,11 +180,61 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  &__education-label {
+    color: #000000;
+    transition: color 0.18s ease;
+  }
+
+  &__education-label:hover {
+    color: #00d7b7;
+  }
+}
+
+@keyframes skills-arrow-slide {
+  from {
+    transform: translate(82px, -82px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes skills-icon-hover-jump {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-28px);
+  }
+
+  50% {
+    transform: translateX(28px);
+  }
+
+  75% {
+    transform: translateX(-22px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 992px) {
   .skills {
-    padding-top: 180px;
+    padding-top: 0;
+
+    &__spacer {
+      max-width: 300px;
+      min-height: 120px;
+    }
+
+    &__spacer-arrow {
+      display: none;
+    }
 
     &__card {
       width: 100%;
@@ -156,18 +276,33 @@
     }
 
     &__item {
-      width: 60px;
-      min-height: 98px;
+      width: 72px;
+      min-height: 116px;
       justify-self: center;
+      gap: 8px;
+    }
 
-      &--center {
-        grid-column: 2;
-      }
+    &__icon-box {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     &__image {
       width: 60px;
-      height: 60px;
+      height: auto;
+      max-width: none;
+      clip-path: inset(0 0 24% 0);
+      object-fit: contain;
+      object-position: center top;
+    }
+
+    &__label {
+      font-size: 14px;
+      line-height: 1.2;
     }
 
     &__footer {
@@ -193,5 +328,12 @@
       line-height: 1.35;
       text-align: left;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__image {
+    animation: none;
+    transition: none;
   }
 }

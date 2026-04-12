@@ -6,8 +6,8 @@
 
     <div class="header__actions">
       <div class="header__language-switch">
-        <button class="header__language-button header__language-button--active" type="button">EN</button>
-        <button class="header__language-button" type="button">DE</button>
+        <button class="header__language-button" [class.header__language-button--active]="selectedLanguage === 'EN'" type="button" (click)="setLanguage('EN')">EN</button>
+        <button class="header__language-button" [class.header__language-button--active]="selectedLanguage === 'DE'" type="button" (click)="setLanguage('DE')">DE</button>
       </div>
 
       <button
@@ -33,8 +33,8 @@
 
         <div class="header__actions">
           <div class="header__language-switch">
-            <button class="header__language-button header__language-button--active" type="button">EN</button>
-            <button class="header__language-button" type="button">DE</button>
+            <button class="header__language-button" [class.header__language-button--active]="selectedLanguage === 'EN'" type="button" (click)="setLanguage('EN')">EN</button>
+            <button class="header__language-button" [class.header__language-button--active]="selectedLanguage === 'DE'" type="button" (click)="setLanguage('DE')">DE</button>
           </div>
 
           <button

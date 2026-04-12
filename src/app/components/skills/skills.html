@@ -1,17 +1,41 @@
 <section id="skills" class="skills">
   <div class="page-container">
+    <div class="skills__spacer" aria-hidden="true">
+      <div class="skills__spacer-arrow" [class.skills__spacer-arrow--animate]="arrowIsAnimating" #spacerArrow>
+        <img class="skills__spacer-arrow-frame" src="assets/images/interactions/skills/about-to-skills-arrow-frame-2.png" alt="" />
+      </div>
+    </div>
+
     <div class="skills__card">
       <div class="skills__title-wrap">
         <h2 class="skills__title">My skills</h2>
       </div>
 
       <div class="skills__grid">
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/angular-skill.png" alt="Angular" /></div>
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/typescript-skill.png" alt="TypeScript" /></div>
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/javascript-skill.png" alt="JavaScript" /></div>
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/html-skill.png" alt="HTML" /></div>
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/css-skill.png" alt="CSS" /></div>
-        <div class="skills__item"><img class="skills__image" src="assets/images/skills/git-skill.png" alt="Git" /></div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/angular-skill.png" alt="Angular" /></span>
+          <span class="skills__label">Angular</span>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/typescript-skill.png" alt="TypeScript" /></span>
+          <span class="skills__label">TypeScript</span>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/javascript-skill.png" alt="JavaScript" /></span>
+          <span class="skills__label">JavaScript</span>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/html-skill.png" alt="HTML" /></span>
+          <span class="skills__label">HTML</span>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/css-skill.png" alt="CSS" /></span>
+          <span class="skills__label">CSS</span>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon-box"><img class="skills__image" src="assets/images/skills/git-skill.png" alt="Git" /></span>
+          <span class="skills__label">Git</span>
+        </div>
       </div>
 
       <div class="skills__footer">
@@ -19,7 +43,7 @@
         <p class="skills__footer-text">
           Don&#39;t see the skill you need?
           <a class="skills__contact-button" href="#contact">Contact me</a>
-          I&#39;m always ready to learn!
+          <span class="skills__education-label">I&#39;m always ready to learn!</span>
         </p>
       </div>
     </div>

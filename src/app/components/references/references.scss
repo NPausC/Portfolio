@@ -52,13 +52,26 @@
   &__spacer-arrow {
     position: absolute;
     top: 38px;
-    right: 48px;
-    width: 104px;
-    height: 104px;
-    border-left: 4px solid #000000;
-    border-bottom: 4px solid #000000;
-    transform: rotate(-45deg);
-    box-sizing: border-box;
+    right: 52px;
+    width: 235px;
+    height: 235px;
+    pointer-events: none;
+    transform: translate(0, 0);
+  }
+
+  &__spacer-arrow--animate {
+    animation: references-arrow-slide 860ms ease-out forwards;
+  }
+
+  &__spacer-arrow-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left top;
+    user-select: none;
+    display: block;
   }
 
   &__card {
@@ -68,12 +81,21 @@
     background-color: #fffcf3;
     text-align: center;
     box-sizing: border-box;
+    transition: border-color 0.2s ease;
 
     &--active {
       border-color: #000000;
 
       .references__quote {
         color: #000000;
+      }
+    }
+
+    &:hover {
+      border-color: #00d7b7;
+
+      .references__quote {
+        color: #00d7b7;
       }
     }
   }
@@ -84,6 +106,7 @@
     font-size: 34px;
     line-height: 0.6;
     font-weight: 700;
+    transition: color 0.2s ease;
   }
 
   &__card-name {
@@ -103,6 +126,16 @@
     font-size: 16px;
     line-height: 1.32;
     text-align: left;
+  }
+}
+
+@keyframes references-arrow-slide {
+  from {
+    transform: translate(82px, -82px);
+  }
+
+  to {
+    transform: translate(0, 0);
   }
 }
 
@@ -138,12 +171,7 @@
     }
 
     &__spacer-arrow {
-      top: 24px;
-      right: 24px;
-      width: 72px;
-      height: 72px;
-      border-left-width: 3px;
-      border-bottom-width: 3px;
+      display: none;
     }
 
     &__card {

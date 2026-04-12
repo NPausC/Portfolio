@@ -45,6 +45,11 @@
     line-height: 0.9;
     letter-spacing: -0.04em;
     color: #fffcf3;
+    transition: color 0.2s ease;
+  }
+
+  &__title:hover {
+    color: #00d7b7;
   }
 
   &__form-area {
