@@ -8,17 +8,76 @@
         <h3 class="contact__subtitle">Want to discuss a new project?</h3>
         <p class="contact__text">Say hello! Let's discuss your ideas and make it happen.</p>
 
-        <form class="contact__form">
-          <input class="contact__input" type="text" placeholder="Your name" />
-          <input class="contact__input" type="email" placeholder="Your email" />
-          <textarea class="contact__textarea" placeholder="Your message"></textarea>
+        <form class="contact__form" novalidate (submit)="onSubmit($event)">
+          <div class="contact__field contact__field--name">
+            <input
+              #nameInput
+              class="contact__input"
+              [class.contact__input--error]="nameHasError"
+              [class.contact__input--valid]="nameIsValid"
+              type="text"
+              placeholder="Your name"
+              (focus)="nameTouched = true"
+              (input)="nameValue = nameInput.value"
+            />
+            @if (nameShowStatus) {
+              <span class="contact__field-status" [class.contact__field-status--error]="nameHasError" [class.contact__field-status--valid]="nameIsValid" aria-hidden="true">{{ nameHasError ? '!' : '✓' }}</span>
+            }
+          </div>
+          @if (nameHasError) {
+            <p class="contact__error">Your name is required</p>
+          }
+
+          <div class="contact__field contact__field--email">
+            <input
+              #emailInput
+              class="contact__input"
+              [class.contact__input--error]="emailHasError"
+              [class.contact__input--valid]="emailIsValid"
+              type="text"
+              inputmode="email"
+              autocapitalize="off"
+              autocorrect="off"
+              spellcheck="false"
+              placeholder="Your email"
+              (focus)="emailTouched = true"
+              (input)="emailValue = emailInput.value"
+            />
+            @if (emailShowStatus) {
+              <span class="contact__field-status" [class.contact__field-status--error]="emailHasError" [class.contact__field-status--valid]="emailIsValid" aria-hidden="true">{{ emailHasError ? '!' : '✓' }}</span>
+            }
+          </div>
+          @if (emailHasError) {
+            <p class="contact__error">Your email is required</p>
+          }
+
+          <div class="contact__field contact__field--message">
+            <textarea
+              #messageInput
+              class="contact__textarea"
+              [class.contact__input--error]="messageHasError"
+              [class.contact__input--valid]="messageIsValid"
+              placeholder="Your message"
+              (focus)="messageTouched = true"
+              (input)="messageValue = messageInput.value"
+            ></textarea>
+            @if (messageShowStatus) {
+              <span class="contact__field-status contact__field-status--textarea" [class.contact__field-status--error]="messageHasError" [class.contact__field-status--valid]="messageIsValid" aria-hidden="true">{{ messageHasError ? '!' : '✓' }}</span>
+            }
+          </div>
+          @if (messageHasError) {
+            <p class="contact__error">Your message is required</p>
+          }
 
           <label class="contact__checkbox-row">
-            <input class="contact__checkbox" type="checkbox" />
-            <span class="contact__checkbox-text">I've read the <a class="contact__link" routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+            <input #privacyCheckbox class="contact__checkbox" type="checkbox" (change)="onPrivacyChange(privacyCheckbox.checked)" (blur)="privacyTouched = true" />
+            <span class="contact__checkbox-text">I&#39;ve read the <a class="contact__link" routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
           </label>
+          @if (privacyHasError) {
+            <p class="contact__error">Please accept the privacy policy.</p>
+          }
 
-          <button class="contact__button" type="submit">Send message</button>
+          <button class="contact__button" [class.contact__button--enabled]="privacyAccepted" type="submit">Send message</button>
         </form>
       </div>
 
@@ -29,7 +88,11 @@
         </div>
 
         <div class="contact__footer-right">
-          <a class="contact__back-to-top" href="#top" aria-label="Back to top">↑</a>
+          <a class="contact__back-to-top" href="#top" aria-label="Back to top" (click)="scrollToTop($event)">
+            <span class="contact__back-to-top-track" aria-hidden="true">
+              <span class="contact__back-to-top-runner"><img class="contact__back-to-top-image" src="assets/images/hero/scroll-arrow-head.png" alt="" aria-hidden="true" /></span>
+            </span>
+          </a>
 
           <div class="contact__socials">
             <a class="contact__social-link" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><img class="contact__social-icon" src="assets/images/ui/socials/github-icon.png" alt="" /></a>

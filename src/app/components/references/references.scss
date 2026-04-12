@@ -1,4 +1,6 @@
 .references {
+  position: relative;
+  z-index: 2;
   padding: 118px 0 0;
   background-color: #fffcf3;
 
@@ -45,18 +47,19 @@
     position: relative;
     width: 100%;
     max-width: 1239px;
-    min-height: 300px;
-    margin-top: 18px;
+    min-height: 228px;
+    margin-top: 6px;
   }
 
   &__spacer-arrow {
     position: absolute;
-    top: 38px;
+    top: 34px;
     right: 52px;
     width: 235px;
     height: 235px;
     pointer-events: none;
     transform: translate(0, 0);
+    z-index: 3;
   }
 
   &__spacer-arrow--animate {
@@ -131,7 +134,7 @@
 
 @keyframes references-arrow-slide {
   from {
-    transform: translate(82px, -82px);
+    transform: translate(82px, -56px);
   }
 
   to {

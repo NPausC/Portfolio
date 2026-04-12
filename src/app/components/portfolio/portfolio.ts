@@ -7,6 +7,7 @@ type Project = {
   subtitle: string;
   description: string;
   imageSrc: string;
+  hoverImageSrc: string;
   imageAlt: string;
   liveLink: string;
   githubLink: string;
@@ -69,6 +70,7 @@ export class Portfolio implements AfterViewInit, OnDestroy {
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageSrc: 'images/portfolio/join.png',
+      hoverImageSrc: 'images/portfolio/join-color.png',
       imageAlt: 'Join project preview',
       liveLink: 'https://example.com/join',
       githubLink: 'https://github.com/example/join',
@@ -81,6 +83,7 @@ export class Portfolio implements AfterViewInit, OnDestroy {
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       imageSrc: 'images/portfolio/sharkie.png',
+      hoverImageSrc: 'images/portfolio/sharkie-color.png',
       imageAlt: 'Sharkie project preview',
       liveLink: 'https://example.com/sharkie',
       githubLink: 'https://github.com/example/sharkie',
@@ -93,6 +96,7 @@ export class Portfolio implements AfterViewInit, OnDestroy {
       description:
         'This App is a Slack Clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       imageSrc: 'images/portfolio/dabubble.png',
+      hoverImageSrc: 'images/portfolio/dabubble-color.png',
       imageAlt: 'DABubble project preview',
       liveLink: 'https://example.com/dabubble',
       githubLink: 'https://github.com/example/dabubble',
@@ -105,6 +109,7 @@ export class Portfolio implements AfterViewInit, OnDestroy {
       description:
         'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       imageSrc: 'images/portfolio/pokedex.png',
+      hoverImageSrc: 'images/portfolio/pokedex-color.png',
       imageAlt: 'Pokedex project preview',
       liveLink: 'https://example.com/pokedex',
       githubLink: 'https://github.com/example/pokedex',

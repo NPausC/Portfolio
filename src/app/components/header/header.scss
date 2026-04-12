@@ -1,6 +1,9 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 1440px);
   z-index: 40;
   padding: 0 24px;
   background-color: #fffcf3;
@@ -298,6 +301,12 @@
     font-weight: 800;
     line-height: 1;
     text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  &__menu-footer-link:hover,
+  &__menu-footer-link:focus-visible {
+    color: #00d7b7;
   }
 
   &__menu-email {
@@ -317,10 +326,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
     color: #fffcf3;
     text-decoration: none;
+  }
+
+  &__menu-social-link:hover,
+  &__menu-social-link:focus-visible {
+    .header__menu-social-icon {
+      transform: translateY(-8px);
+    }
   }
 
   &__menu-social-icon {
@@ -328,6 +344,7 @@
     width: 40px;
     height: 40px;
     object-fit: contain;
+    transition: transform 0.18s ease;
   }
 }
 

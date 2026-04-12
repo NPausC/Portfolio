@@ -12,6 +12,7 @@ export class ProjectCard {
   @Input() subtitle = '';
   @Input() description = '';
   @Input() imageSrc = '';
+  @Input() hoverImageSrc = '';
   @Input() imageAlt = '';
   @Input() liveLink = '';
   @Input() githubLink = '';
