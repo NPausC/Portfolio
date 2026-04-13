@@ -42,3 +42,7 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 *.pdf
+
+# Documentation / design handoff
+/Projektordner/
+/DOKUMENTATION_*.md

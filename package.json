@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:ftp": "ng build --configuration production --base-href /angular-projects/portfolio/ --deploy-url /angular-projects/portfolio/",
+    "deploy:ftp": "npm run build:ftp && ./scripts/deploy-ftp.sh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
