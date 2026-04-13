@@ -7,6 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project-card.scss',
 })
 export class ProjectCard {
+  isExpanded = false;
+
+  expandCard(): void {
+    this.isExpanded = true;
+  }
+
   @Input() projectNumber = '';
   @Input() title = '';
   @Input() subtitle = '';

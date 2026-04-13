@@ -1,11 +1,11 @@
-<article class="project-card" [class.project-card--reverse]="reverse">
+<article class="project-card" [class.project-card--reverse]="reverse" [class.project-card--active]="isExpanded">
   <div class="project-card__content">
     @if (reverse) {
       <span class="project-card__number">{{ projectNumber }}</span>
     }
 
     <div class="project-card__visual">
-      <div class="project-card__image-wrapper">
+      <div class="project-card__image-wrapper" role="button" tabindex="0" [attr.aria-expanded]="isExpanded" (click)="expandCard()" (keydown.enter)="expandCard()" (keydown.space)="expandCard()">
         <img class="project-card__image project-card__image--mono" [src]="imageSrc" [alt]="imageAlt" />
         <img class="project-card__image project-card__image--color" [src]="hoverImageSrc || imageSrc" [alt]="imageAlt" />
         <img class="project-card__hover-frame" src="assets/images/interactions/portfolio/project-hover-frame.png" alt="" aria-hidden="true" />

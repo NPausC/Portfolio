@@ -147,6 +147,20 @@
     transform: translate(-50%, -34px);
   }
 }
+@keyframes hero-arrow-drop-mobile {
+  0% {
+    transform: translate(-50%, -44px);
+  }
+
+  99% {
+    transform: translate(-50%, 78px);
+  }
+
+  100% {
+    transform: translate(-50%, -44px);
+  }
+}
+
 @media (max-width: 992px) {
   .hero {
     padding: 0;
@@ -213,7 +227,7 @@
     &__scroll {
       right: 0;
       bottom: 30px;
-      gap: 10px;
+      gap: 0;
     }
 
     &__scroll-track {
@@ -225,12 +239,16 @@
     &__scroll-runner {
       width: 34px;
       height: 61px;
-      animation: none;
-      transform: translate(-50%, 8px);
+      transform: translate(-50%, -44px);
+      animation: hero-arrow-drop-mobile 1.05s linear infinite;
+      will-change: transform;
     }
 
     &__scroll-text {
       max-width: 56px;
+      margin-top: -2px;
+      padding-top: 2px;
+      background-color: #fffcf3;
       font-size: 22px;
       line-height: 1;
       text-align: center;

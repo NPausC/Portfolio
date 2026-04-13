@@ -201,6 +201,16 @@
   }
 }
 
+@keyframes skills-arrow-slide-mobile {
+  from {
+    transform: translate(86px, -86px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 @keyframes skills-icon-hover-jump {
   0% {
     transform: translateX(0);
@@ -228,12 +238,29 @@
     padding-top: 0;
 
     &__spacer {
+      width: 300px;
       max-width: 300px;
-      min-height: 120px;
+      min-height: 200px;
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     &__spacer-arrow {
-      display: none;
+      display: block;
+      top: 52px;
+      left: 66px;
+      right: auto;
+      width: 136px;
+      height: 136px;
+    }
+
+    &__spacer-arrow--animate {
+      animation: skills-arrow-slide-mobile 860ms ease-out forwards;
+    }
+
+    &__spacer-arrow-frame {
+      filter: drop-shadow(0.8px 0 0 #000000) drop-shadow(-0.8px 0 0 #000000);
     }
 
     &__card {

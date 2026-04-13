@@ -525,7 +525,8 @@
 
     &__menu-footer-link {
       font-size: 40px;
-      text-transform: lowercase;
+      text-transform: none;
+      animation: header-mobile-say-hi-blink 2s ease-in-out infinite;
     }
 
     &__menu-email {
@@ -539,5 +540,19 @@
     &__menu-social-link {
       font-size: 20px;
     }
+  }
+}
+
+@keyframes header-mobile-say-hi-blink {
+  0% {
+    color: #00d7b7;
+  }
+
+  50% {
+    color: #fffcf3;
+  }
+
+  100% {
+    color: #00d7b7;
   }
 }

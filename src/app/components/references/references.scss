@@ -1,7 +1,7 @@
 .references {
   position: relative;
   z-index: 2;
-  padding: 118px 0 0;
+  padding: 30px 0 0;
   background-color: #fffcf3;
 
   &__content {
@@ -53,8 +53,8 @@
 
   &__spacer-arrow {
     position: absolute;
-    top: 34px;
-    right: 52px;
+    top: 26px;
+    right: 170px;
     width: 235px;
     height: 235px;
     pointer-events: none;
@@ -131,7 +131,6 @@
     text-align: left;
   }
 }
-
 @keyframes references-arrow-slide {
   from {
     transform: translate(82px, -56px);
@@ -141,10 +140,19 @@
     transform: translate(0, 0);
   }
 }
+@keyframes references-arrow-slide-mobile {
+  from {
+    transform: translate(86px, -86px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
 
 @media (max-width: 992px) {
   .references {
-    padding-top: 100px;
+    padding-top: 30px;
 
     &__content {
       max-width: min(300px, calc(100vw - 40px));
@@ -168,13 +176,30 @@
     }
 
     &__spacer {
-      max-width: min(300px, calc(100vw - 40px));
-      min-height: 180px;
+      width: 300px;
+      max-width: 300px;
+      min-height: 200px;
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
       margin-top: 16px;
     }
 
     &__spacer-arrow {
-      display: none;
+      display: block;
+      top: 74px;
+      left: 66px;
+      right: auto;
+      width: 136px;
+      height: 136px;
+    }
+
+    &__spacer-arrow--animate {
+      animation: references-arrow-slide-mobile 860ms ease-out forwards;
+    }
+
+    &__spacer-arrow-image {
+      filter: drop-shadow(0.8px 0 0 #000000) drop-shadow(-0.8px 0 0 #000000);
     }
 
     &__card {

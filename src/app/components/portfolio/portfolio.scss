@@ -84,21 +84,48 @@
   }
 }
 
+@keyframes portfolio-arrow-slide-mobile {
+  from {
+    transform: translate(-62px, -62px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 @media (max-width: 992px) {
   .portfolio {
-    padding-top: 108px;
+    padding-top: 36px;
 
     &__spacer {
-      min-height: 140px;
-      max-width: 320px;
+      width: 300px;
+      max-width: 300px;
+      min-height: 200px;
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     &__spacer-arrow {
-      display: none;
+      display: block;
+      top: 22px;
+      left: 66px;
+      width: 136px;
+      height: 136px;
+      right: auto;
+    }
+
+    &__spacer-arrow--animate {
+      animation: portfolio-arrow-slide-mobile 860ms ease-out forwards;
+    }
+
+    &__spacer-arrow-image {
+      filter: drop-shadow(0.8px 0 0 #000000) drop-shadow(-0.8px 0 0 #000000);
     }
 
     &__content {
-      min-height: 2567px;
+      min-height: auto;
     }
 
     &__title {
@@ -113,9 +140,9 @@
     }
 
     &__projects {
-      max-width: 320px;
+      max-width: 300px;
       margin-top: 48px;
-      gap: 260px;
+      gap: 90px;
     }
   }
 }

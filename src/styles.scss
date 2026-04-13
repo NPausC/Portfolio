@@ -27,6 +27,10 @@ button {
   font-family: 'Syne', sans-serif;
 }
 
+h2 {
+  transition: color 180ms ease;
+}
+
 p,
 a,
 input,
@@ -56,8 +60,12 @@ label {
   }
 }
 
-@media (min-width: 993px) {
+@media (hover: hover) {
   h2:hover {
-    color: #00d7b7;
+    color: #00bc8f;
   }
+}
+
+h2:active {
+  color: #00bc8f;
 }
