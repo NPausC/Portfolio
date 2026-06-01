@@ -350,14 +350,14 @@
 
 @media (max-width: 992px) {
   .header {
+    padding: 0;
+
     &__menu-overlay {
       &::before,
       &::after {
         display: none;
       }
     }
-
-    padding: 0;
 
     &__content {
       width: 100%;
