@@ -41,7 +41,7 @@
     position: relative;
     width: 100%;
     max-width: 1240px;
-    min-height: 470px;
+    min-height: 687px;
     margin: 0 auto;
     padding: 66px 82px 10px;
     border: 4px solid #000000;
@@ -169,6 +169,8 @@
   }
 
   &__contact-button {
+    position: relative;
+    display: inline-block;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -179,15 +181,28 @@
     line-height: 1.22;
     text-decoration: none;
     cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #00d7b7;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(1);
+    }
   }
 
   &__education-label {
     color: #000000;
-    transition: color 0.18s ease;
-  }
-
-  &__education-label:hover {
-    color: #00d7b7;
   }
 }
 

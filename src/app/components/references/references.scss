@@ -40,7 +40,7 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 24px;
   }
 
   &__spacer {
@@ -78,7 +78,7 @@
   }
 
   &__card {
-    min-height: 238px;
+    min-height: 343px;
     padding: 18px 16px 16px;
     border: 2px solid #000000;
     background-color: #fffcf3;
