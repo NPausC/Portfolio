@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  private readonly emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   privacyAccepted = false;
   privacyTouched = false;
   submitAttempted = false;
@@ -33,7 +35,7 @@ export class Contact {
   }
 
   get emailHasError(): boolean {
-    return (this.emailTouched || this.submitAttempted) && this.emailValue.trim().length === 0;
+    return (this.emailTouched || this.submitAttempted) && !this.emailPattern.test(this.emailValue.trim());
   }
 
   get emailShowStatus(): boolean {
@@ -41,7 +43,7 @@ export class Contact {
   }
 
   get emailIsValid(): boolean {
-    return this.emailTouched && this.emailValue.trim().length > 0;
+    return this.emailTouched && this.emailPattern.test(this.emailValue.trim());
   }
 
   get messageHasError(): boolean {
@@ -58,6 +60,13 @@ export class Contact {
 
   get privacyHasError(): boolean {
     return (this.privacyTouched || this.submitAttempted) && !this.privacyAccepted;
+  }
+
+  get formIsValid(): boolean {
+    return this.nameValue.trim().length > 0
+      && this.emailPattern.test(this.emailValue.trim())
+      && this.messageValue.trim().length > 0
+      && this.privacyAccepted;
   }
 
   onPrivacyChange(checked: boolean): void {

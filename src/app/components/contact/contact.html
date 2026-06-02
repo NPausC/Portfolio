@@ -16,17 +16,16 @@
               [class.contact__input--error]="nameHasError"
               [class.contact__input--valid]="nameIsValid"
               type="text"
+              autocomplete="name"
               placeholder="Your name"
-              (focus)="nameTouched = true"
+              (blur)="nameTouched = true"
               (input)="nameValue = nameInput.value"
             />
             @if (nameShowStatus) {
               <span class="contact__field-status" [class.contact__field-status--error]="nameHasError" [class.contact__field-status--valid]="nameIsValid" aria-hidden="true">{{ nameHasError ? '!' : '✓' }}</span>
             }
           </div>
-          @if (nameHasError) {
-            <p class="contact__error">Your name is required</p>
-          }
+          <p class="contact__error" [class.contact__error--visible]="nameHasError">Your name is required</p>
 
           <div class="contact__field contact__field--email">
             <input
@@ -34,22 +33,21 @@
               class="contact__input"
               [class.contact__input--error]="emailHasError"
               [class.contact__input--valid]="emailIsValid"
-              type="text"
+              type="email"
+              autocomplete="email"
               inputmode="email"
               autocapitalize="off"
               autocorrect="off"
               spellcheck="false"
               placeholder="Your email"
-              (focus)="emailTouched = true"
+              (blur)="emailTouched = true"
               (input)="emailValue = emailInput.value"
             />
             @if (emailShowStatus) {
               <span class="contact__field-status" [class.contact__field-status--error]="emailHasError" [class.contact__field-status--valid]="emailIsValid" aria-hidden="true">{{ emailHasError ? '!' : '✓' }}</span>
             }
           </div>
-          @if (emailHasError) {
-            <p class="contact__error">Your email is required</p>
-          }
+          <p class="contact__error" [class.contact__error--visible]="emailHasError">Please enter a valid email address</p>
 
           <div class="contact__field contact__field--message">
             <textarea
@@ -57,27 +55,24 @@
               class="contact__textarea"
               [class.contact__input--error]="messageHasError"
               [class.contact__input--valid]="messageIsValid"
+              autocomplete="off"
               placeholder="Your message"
-              (focus)="messageTouched = true"
+              (blur)="messageTouched = true"
               (input)="messageValue = messageInput.value"
             ></textarea>
             @if (messageShowStatus) {
               <span class="contact__field-status contact__field-status--textarea" [class.contact__field-status--error]="messageHasError" [class.contact__field-status--valid]="messageIsValid" aria-hidden="true">{{ messageHasError ? '!' : '✓' }}</span>
             }
           </div>
-          @if (messageHasError) {
-            <p class="contact__error">Your message is required</p>
-          }
+          <p class="contact__error" [class.contact__error--visible]="messageHasError">Your message is required</p>
 
           <label class="contact__checkbox-row">
             <input #privacyCheckbox class="contact__checkbox" type="checkbox" (change)="onPrivacyChange(privacyCheckbox.checked)" (blur)="privacyTouched = true" />
             <span class="contact__checkbox-text">I&#39;ve read the <a class="contact__link" routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
           </label>
-          @if (privacyHasError) {
-            <p class="contact__error">Please accept the privacy policy.</p>
-          }
+          <p class="contact__error" [class.contact__error--visible]="privacyHasError">Please accept the privacy policy.</p>
 
-          <button class="contact__button" [class.contact__button--enabled]="privacyAccepted" type="submit">Send message</button>
+          <button class="contact__button" [class.contact__button--enabled]="formIsValid" [disabled]="!formIsValid" type="submit">Send message</button>
         </form>
       </div>
 
