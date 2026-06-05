@@ -186,7 +186,68 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+  .about-me {
+    padding-top: 64px;
+
+    &__card {
+      width: calc(100% - 40px);
+      max-width: 728px;
+      min-height: 520px;
+      padding-bottom: 64px;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    &__text-block {
+      width: auto;
+      min-height: 0;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: clamp(46px, 7.3vw, 56px);
+    }
+
+    &__description,
+    &__detail {
+      font-size: 18px;
+    }
+
+    &__details {
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    &__button {
+      width: 200px;
+      min-width: 200px;
+      margin-top: 28px;
+      margin-left: 68px;
+      font-size: 18px;
+    }
+
+    &__image-wrapper,
+    &__image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+    }
+
+    &__image-wrapper {
+      margin-top: 78px;
+    }
+
+    &__arrow {
+      right: 48px;
+      bottom: 8px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
   .about-me {
     padding-top: 36px;
 

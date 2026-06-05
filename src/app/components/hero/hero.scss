@@ -162,7 +162,39 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+  .hero {
+    &__content {
+      max-width: 728px;
+      padding-top: 104px;
+    }
+
+    &__mail-link {
+      left: 12px;
+      font-size: 16px;
+    }
+
+    &__headline-block,
+    &__title,
+    &__name-row {
+      max-width: min(680px, calc(100% - 40px));
+    }
+
+    &__title {
+      font-size: clamp(64px, 11.5vw, 88px);
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+
+    &__scroll {
+      right: 12px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
   .hero {
     padding: 0;
 

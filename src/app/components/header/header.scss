@@ -348,7 +348,45 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+  .header {
+    &__content {
+      max-width: 728px;
+    }
+
+    &__menu-overlay {
+      min-height: 100vh;
+      background-color: #000000;
+    }
+
+    &__menu-shell {
+      min-height: 100vh;
+    }
+
+    &__menu-body {
+      flex: 1;
+    }
+
+    &__menu-link-text {
+      font-size: 72px;
+    }
+
+    &__menu-footer-content {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
+
+    &__menu-footer-link {
+      font-size: 52px;
+    }
+
+    &__menu-email {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
   .header {
     padding: 0;
 

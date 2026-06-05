@@ -321,9 +321,11 @@
   }
 
   &__logo {
-    font-size: 22px;
+    align-self: flex-start;
+    font-size: 30px;
     line-height: 1;
     color: #fffcf3;
+    text-decoration: none;
   }
 
   &__copyright {
@@ -448,7 +450,33 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+  .contact {
+    &__panel {
+      min-height: 980px;
+      padding: 150px 40px 30px;
+      clip-path: polygon(0 54px, 100% 118px, 100% 100%, 0 100%);
+    }
+
+    &__title {
+      font-size: 58px;
+    }
+
+    &__form-area {
+      margin-top: 56px;
+    }
+
+    &__footer {
+      margin-top: 104px;
+    }
+
+    &__copyright {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
   .contact {
     padding-top: 72px;
 

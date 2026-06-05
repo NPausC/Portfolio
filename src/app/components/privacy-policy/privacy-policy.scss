@@ -425,7 +425,33 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+  .privacy-policy {
+    &__page {
+      max-width: 768px;
+    }
+
+    &__content {
+      padding: 48px 56px 84px;
+    }
+
+    &__title {
+      margin-bottom: 48px;
+      font-size: 58px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__footer {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
   .privacy-policy {
     padding: 0;
     background-color: #fffcf3;
